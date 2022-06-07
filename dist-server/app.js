@@ -19,30 +19,18 @@ var _users = _interopRequireDefault(require("./routes/users"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-// var express = require('express');
-// var path = require('path');
-// var cookieParser = require('cookie-parser');
-// var logger = require('morgan');
-// var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
+//PRELOADING
+//Express
+//SERVER
 var app = (0, _express["default"])();
 app.use((0, _morgan["default"])('dev'));
 app.use(_express["default"].json());
 app.use(_express["default"].urlencoded({
   extended: false
 }));
-app.use((0, _cookieParser["default"])()); // var app = express();
-// app.use(logger('dev'));
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: false }));
-// app.use(cookieParser());
-
+app.use((0, _cookieParser["default"])());
 app.use(_express["default"]["static"](_path["default"].join(__dirname, '../public')));
 app.use('/', _index["default"]);
 app.use('/users', _users["default"]);
-var _default = app; // app.use(express.static(path.join(__dirname, 'public')));
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
-// module.exports = app;
-
+var _default = app;
 exports["default"] = _default;

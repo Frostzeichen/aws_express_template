@@ -2,10 +2,17 @@
   "name": "aws",
   "version": "0.0.0",
   "private": true,
-  "nodemonConfig": { 
+  "nodemonConfig": {
     "exec": "npm run dev",
-    "watch": ["server/*", "public/*"],
-    "ignore": ["**/__tests__/**", "*.test.js", "*.spec.js"]
+    "watch": [
+      "server/*",
+      "public/*"
+    ],
+    "ignore": [
+      "**/__tests__/**",
+      "*.test.js",
+      "*.spec.js"
+    ]
   },
   "scripts": {
     "start": "npm run prod",
@@ -21,15 +28,24 @@
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
+    "Babel": "0.0.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.16",
     "npm-run-all": "^4.1.5",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "rimraf": "^3.0.2"
   },
   "babel": {
-    "presets": ["@babel/preset-env"]
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.17.12"
   }
 }
